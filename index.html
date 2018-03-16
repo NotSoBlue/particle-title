@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Particle Logo</title>
+</head>
+    <style>
+        html, body {
+            height:100%;
+        }
+        body {
+            background: url(bg-login.jpg) center center no-repeat;
+            background-size: cover;
+
+        }
+        .slides {
+            display: none;
+        }
+    </style>
+<body>
+    
+    <div id="particle-slider">
+        <div class="slides">
+            <div class="slide" data-src="custom_logo.png"></div>
+        </div>
+   
+        <canvas class="draw" height="500" ></canvas>
+  	 </div>
+    <script src="http://particleslider.com/js/particleslider/current/particleslider.js"></script>
+    <script>
+        // Create a new Particle
+        var ps = new ParticleSlider({
+          mouseForce: 10000 ,
+          monochrome: false ,
+          ptlSize: 1,
+
+        });
+
+        var ptl = new ps.Particle(ps);
+
+        // Set time to live of Particle to20 frames.
+        ptl.ttl = 30;
+    </script>
+</body>
+</html>
